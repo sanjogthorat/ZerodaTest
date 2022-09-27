@@ -6,7 +6,7 @@
   <parameter name = "browser" value = "Chrome"/>
     <classes>
       <class name="tempTestPack.TestNgTestClass"/>
-      <class name="tempTestPack.TestNgTestClass2"/>
+      
     </classes>
   </test> <!-- Test -->
 

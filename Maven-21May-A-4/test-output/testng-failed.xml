@@ -4,17 +4,18 @@
   <test thread-count="5" name="ChromeTest(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="tempTestPack.TestNgTestClass2">
+      <class name="tempTestPack.TestNgTestClass">
         <methods>
-          <include name="test"/>
-          <include name="beforeMethod"/>
+          <include name="testMethod"/>
+          <include name="clickOnLogoutButton"/>
+          <include name="closedBrowser"/>
+          <include name="buyShare"/>
           <include name="launchBrowser"/>
           <include name="beforeClass"/>
           <include name="cleanPOMObjects"/>
-          <include name="clickOnLogoutButton"/>
-          <include name="closedBrowser"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- tempTestPack.TestNgTestClass2 -->
+      </class> <!-- tempTestPack.TestNgTestClass -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite1234] -->

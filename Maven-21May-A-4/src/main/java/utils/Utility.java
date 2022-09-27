@@ -25,13 +25,13 @@ public class Utility {
 		String m = date.format(systemdate);
 		TakesScreenshot take = (TakesScreenshot)driver;
 		File source = take.getScreenshotAs(OutputType.FILE);
-		File destination = new File("C:\\Users\\Sanjog\\Desktop\\Mannual And Automation Testing\\Screenshots\\Test"+testId+" "+m+".jpg");
+		File destination = new File("test-output\\Fail Test Screenshots\\Test"+testId+" "+m+".jpg");
 		FileHandler.copy(source, destination);
 	}
 	
 	public static String fetchDataFromExcelSheet(String Sheet , int Row , int Cell) throws IOException 
 	{
-		FileInputStream file = new FileInputStream("C:\\Users\\Sanjog\\Desktop\\Test.xlsx");
+		FileInputStream file = new FileInputStream("src\\test\\resources\\Excel Sheet\\Test.xlsx");
 		Cell cell = WorkbookFactory.create(file).getSheet("Sanjog Info").getRow(Row).getCell(Cell);
 		try {
 		String value = cell.getStringCellValue();

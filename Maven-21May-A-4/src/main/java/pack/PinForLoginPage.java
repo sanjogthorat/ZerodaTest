@@ -18,8 +18,8 @@ public class PinForLoginPage {
 	}
 	
 	
-	public void sendLoginPin() {
-		loginPin.sendKeys("001119");
+	public void sendLoginPin(String pin) {
+		loginPin.sendKeys(pin);
 	}
 	public void selectContinueButton() {
 		continueButton.click();
