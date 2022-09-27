@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite1234" class="navigator-link">
-              <span class="suite-name border-skipped">Suite1234</span>
+              <span class="suite-name border-failed">Suite1234</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,  2 skipped,  </span>
+                    <span class="method-stats">2 methods, 1 failed,  1 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite1234" class="hide-methods failed suite-Suite1234"> (hide)</a> <!-- hide-methods failed suite-Suite1234 -->
+                      <a href="#" panel-name="suite-Suite1234" class="show-methods failed suite-Suite1234"> (show)</a> <!-- show-methods failed suite-Suite1234 -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite1234">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite1234" title="tempTestPack.TestNgTestClass" class="method navigator-link" hash-for-method="buyShare">buyShare</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite1234 -->
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -102,11 +116,6 @@
                       <a href="#" panel-name="suite-Suite1234" class="show-methods skipped suite-Suite1234"> (show)</a> <!-- show-methods skipped suite-Suite1234 -->
                     </span>
                     <div class="method-list-content skipped suite-Suite1234">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1234" title="tempTestPack.TestNgTestClass" class="method navigator-link" hash-for-method="buyShare">buyShare</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite1234" title="tempTestPack.TestNgTestClass" class="method navigator-link" hash-for-method="testMethod">testMethod</a> <!-- method navigator-link -->
@@ -124,9 +133,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite1234" class="panel Suite1234">
-          <div class="suite-Suite1234-class-skipped">
+          <div class="suite-Suite1234-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">tempTestPack.TestNgTestClass</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -135,15 +144,15 @@
                   <a name="buyShare">
                   </a> <!-- buyShare -->
                   <span class="method-name">buyShare</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;pin&apos;]&quot;}
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//li[@class=&apos;item&apos;])[6]&quot;}
   (Session info: chrome=105.0.5195.127)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;SANJOG-PC&apos;, ip: &apos;192.168.43.245&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;18.0.1.1&apos;
+System info: host: &apos;SANJOG-PC&apos;, ip: &apos;192.168.225.174&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;18.0.1.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Sanjog\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49436}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3c892bdb795076a68c4e602f3f6f3587
-*** Element info: {Using=xpath, value=//input[@id=&apos;pin&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Sanjog\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49887}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6b688c1450064c24e7bce5accfa0a746
+*** Element info: {Using=xpath, value=(//li[@class=&apos;item&apos;])[6]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -156,28 +165,36 @@ Session ID: 3c892bdb795076a68c4e602f3f6f3587
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-	at pack.PinForLoginPage.sendLoginPin(PinForLoginPage.java:22)
-	at tempTestPack.TestNgTestClass.beforeMethod(TestNgTestClass.java:74)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+	at pack.HomePage.clickOn7ThWishlist(HomePage.java:37)
+	at tempTestPack.TestNgTestClass.buyShare(TestNgTestClass.java:88)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite1234-class-failed -->
+          <div class="suite-Suite1234-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">tempTestPack.TestNgTestClass</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="testMethod">
                   </a> <!-- testMethod -->
                   <span class="method-name">testMethod</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;pin&apos;]&quot;}
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;EH6261&apos;]&quot;}
   (Session info: chrome=105.0.5195.127)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;SANJOG-PC&apos;, ip: &apos;192.168.43.245&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;18.0.1.1&apos;
+System info: host: &apos;SANJOG-PC&apos;, ip: &apos;192.168.225.174&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;18.0.1.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Sanjog\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49436}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3c892bdb795076a68c4e602f3f6f3587
-*** Element info: {Using=xpath, value=//input[@id=&apos;pin&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Sanjog\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49887}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6b688c1450064c24e7bce5accfa0a746
+*** Element info: {Using=xpath, value=//span[text()=&apos;EH6261&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -190,11 +207,11 @@ Session ID: 3c892bdb795076a68c4e602f3f6f3587
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy17.sendKeys(Unknown Source)
-	at pack.PinForLoginPage.sendLoginPin(PinForLoginPage.java:22)
-	at tempTestPack.TestNgTestClass.beforeMethod(TestNgTestClass.java:74)
+	at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+	at pack.HomePage.clickOnAccountIdButton(HomePage.java:51)
+	at tempTestPack.TestNgTestClass.clickOnLogoutButton(TestNgTestClass.java:131)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
+... Removed 33 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -257,7 +274,7 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'buyShare')
 data.setCell(0, 2, 'tempTestPack.TestNgTestClass')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 6021);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testMethod')
 data.setCell(1, 2, 'tempTestPack.TestNgTestClass')
@@ -266,7 +283,7 @@ window.suiteTableData['Suite1234']= { tableData: data, tableDiv: 'times-div-Suit
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Suite1234">
               </div> <!-- times-div-Suite1234 -->
             </div> <!-- times-div -->
@@ -299,41 +316,43 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">8068 ms</span>
+                <span class="method-start">2136 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">16922 ms</span>
+                <span class="method-start">8918 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">buyShare</span>
-                <span class="method-start">24560 ms</span>
+                <span class="method-start">9423 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">clickOnLogoutButton</span>
-                <span class="method-start">24568 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">clickOnLogoutButton([TestResult name=buyShare status=FAILURE method=TestNgTestClass.buyShare()[pri:0, instance:tempTestP...)</span>
+                <span class="method-start">15448 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">24572 ms</span>
+                <span class="method-start">21656 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testMethod</span>
-                <span class="method-start">24574 ms</span>
+                <span class="method-start">21659 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">clickOnLogoutButton</span>
-                <span class="method-start">24578 ms</span>
+                <span class="method-start">21664 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">cleanPOMObjects</span>
-                <span class="method-start">24583 ms</span>
+                <span class="method-start">21666 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">closedBrowser</span>
-                <span class="method-start">24585 ms</span>
+                <span class="method-start">21669 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

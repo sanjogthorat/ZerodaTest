@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class PinForLoginPage {
 
-	@FindBy (xpath = "//input[@id='pin']")
+	@FindBy (xpath = "//input[@label='PIN']")
 	private WebElement loginPin;
 	@FindBy (xpath = "//button[@type='submit']")
 	private WebElement continueButton;

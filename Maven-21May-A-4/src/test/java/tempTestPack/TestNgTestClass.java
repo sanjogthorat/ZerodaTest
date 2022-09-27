@@ -70,7 +70,7 @@ public class TestNgTestClass extends Base {
 		loginPage.sendPassword(data);
 		
 		loginPage.clickOnLoginButton();
-		String data2 = Utility.fetchDataFromExcelSheet("Sanjog Info", 6, 2);
+		String data2 = Utility.fetchDataFromExcelSheet("Zeroda pin", 0, 0);
 		pinForLoginPage.sendLoginPin(data2);
 
 		pinForLoginPage.selectContinueButton();
