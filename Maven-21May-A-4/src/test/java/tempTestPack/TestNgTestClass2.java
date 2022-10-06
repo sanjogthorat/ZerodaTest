@@ -19,6 +19,10 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 import pack.HeaderOptionsPage;
 import pack.HiddenpopupForSellSharePage;
 import pack.HomePage;
@@ -39,10 +43,15 @@ private HeaderOptionsPage headerOptionsPage;
 private OrdersPage ordersPage;
 private TradeBookOrConsole tradeBookOrConsole;
 int testId;
+static ExtentTest test;
+static ExtentHtmlReporter reporter;
     @Parameters ("browser")
     @BeforeTest
     public void launchBrowser(String browserName)
     {
+    	reporter = new ExtentHtmlReporter("test-output/ExtendReport/Extent.html");
+		ExtentReports extend = new ExtentReports();
+		extend.attachReporter(reporter);
     	if(browserName.equals("Chrome"))
 		{
 			driver = openChromeBrowser();
@@ -77,7 +86,8 @@ int testId;
 	
 		loginPage.clickOnLoginButton();
 		
-		pinForLoginPage.sendLoginPin();
+		String data2 = Utility.fetchDataFromExcelSheet("Zeroda pin", 0, 0);
+		pinForLoginPage.sendLoginPin(data2);
 		
 		pinForLoginPage.selectContinueButton();
 	
